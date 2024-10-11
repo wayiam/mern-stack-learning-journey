@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar Variations</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            margin: 0;
+        }
+
+        .nav-container {
+            margin-bottom: 10px,
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        .nav1 {
+            border: solid red 2px;
+            background-color: #f8f9fa;
+            padding: 10px;
+            display: flex;
+        }
+
+        .nav1 ul {
+            align-content: center;
+            justify-content: space-around;
+        }
+
+        .nav1 li {
+
+            padding: 10px;
+            margin: 10px;
+            display: inline;
+            border-radius: 15px;
+        }
+
+        .nav1 a {
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav1 button {
+            background-color: #9d4676;
+            border-radius: 12px;
+            width: 80px;
+            margin-left: auto;
+        }
+
+        .nav1 a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: #0a65c7;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .nav1 a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .nav2 {
+            width: 200px;
+            height: 120px;
+            background-color: aqua;
+        }
+
+        .nav2 ul {
+            list-style-type: none;
+            justify-content: start;
+        }
+
+        .nav2 li {
+            margin: 2px;
+            padding: 2px;
+            align-self: start;
+        }
+
+        .nav2 a {
+            text-decoration: none;
+        }
+
+        .nav2 li:hover {
+            background-color: rgb(72, 0, 255);
+        }
+
+        .nav2 button {
+            align-self: center;
+            margin: auto;
+            display: block;
+            background-color: rgb(134, 211, 106);
+            border-radius: 20px;
+        }
+
+        .nav2 button:hover {
+            background-color: #0a65c7;
+        }
+
+        .nav3 {
+            background-color: antiquewhite;
+        }
+        .nav3 ul {
+            list-style-type: none;
+            display:flex;
+            padding: 0;
+            margin:0;
+            justify-content: space-around;
+            align-items: center;
+           
+        }
+        .nav3 li {
+
+        }
+        .nav3 a {
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+        }
+
+        .nav3 button{
+            background-color: aqua;
+            align-items: center;
+            align-self: center;
+            display: block;
+        }
+
+        .nav3 .dropdown-content {
+            display: none;
+        }
+
+        .nav3 .dropdown:hover .dropdown-content {
+           display: block;
+           position: absolute;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Variation 1: Horizontal with Underline effect</h1>
+    <div class="nav-container">
+        <nav class="nav1">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Products</a></li>
+            </ul>
+            <button type="button">Login</button>
+        </nav>
+    </div>
+    <h1>Variation 2: Vertical with hover effect</h1>
+    <div class="nav-container">
+        <nav class="nav2">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Products</a></li>
+            </ul>
+            <button type="button">Login</button>
+        </nav>
+    </div>
+
+    <h1>Variation 3: Horizontal with dropdown</h1>
+    <div class="nav-container">
+        <nav class="nav3">
+            <ul>
+                <li><a href="">Home</a></li>
+
+                <li class="dropdown">
+                    <a href="">About</a>
+                    <div class="dropdown-content">
+                        <a href="">Our Story</a>
+                        <a href="">Team</a>
+                        <a href="">Contact</a>
+                    </div>
+                </li>
+                <li><a href="">Products</a></li>
+                <li> <button type="button">Login</button></li>
+            </ul>
+           
+        </nav>
+    </div>
+</body>
+
+</html>
