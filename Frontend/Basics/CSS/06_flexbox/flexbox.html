@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 20px;
+            margin: 10px;
+            background-color: #f0f0f0;
+        }
+
+        h1,
+        h2 {
+            color: #333
+        }
+
+        .container {
+            background-color: #fff;
+            border: 2px solid #333;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .container-flex {
+            display: flex;
+        }
+
+
+        .triangle {
+            width: 0;
+            height: 0;
+            margin: 20px;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 60px solid;
+            clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+        }
+
+        .pastel-1 {
+            border-bottom: 60px solid #ffb3ba;
+        }
+
+        .pastel-2 {
+            border-bottom: 60px solid #baffce;
+        }
+
+        .pastel-3 {
+            border-bottom: 60px solid #bae1ff;
+        }
+
+        .pastel-4 {
+            border-bottom: 60px solid #ffffba;
+        }
+
+        .pastel-5 {
+            border-bottom: 60px solid #ffdfba;
+        }
+
+        .div-text {
+            display: flex;
+            padding-top: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Learning Flexbox</h1>
+    <section>
+        <div class="container">
+            <h1>1. Default Flex</h1>
+            <div class="container-flex">
+                <div class="triangle pastel-1">
+                    <div class="div-text">1</div>
+                </div>
+                <div class="triangle pastel-2">
+                    <div class="div-text">2</div>
+                </div>
+                <div class="triangle pastel-3">
+                    <div class="div-text">3</div>
+                </div>
+                <div class="triangle pastel-4">
+                    <div class="div-text">4</div>
+                </div>
+                <div class="triangle pastel-5">
+                    <div class="div-text">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>2. Flex Direction Column </h1>
+            <div class="container-flex" style="flex-direction:column;">
+                <div class="triangle pastel-1">
+                    <div class="div-text">1</div>
+                </div>
+                <div class="triangle pastel-2">
+                    <div class="div-text">2</div>
+                </div>
+                <div class="triangle pastel-3">
+                    <div class="div-text">3</div>
+                </div>
+                <div class="triangle pastel-4">
+                    <div class="div-text">4</div>
+                </div>
+                <div class="triangle pastel-5">
+                    <div class="div-text">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>3. justify-content Space Between</h1>
+            <div class="container-flex" style="justify-content: space-between;">
+                <div class="triangle pastel-1">
+                    <div class="div-text">1</div>
+                </div>
+                <div class="triangle pastel-2">
+                    <div class="div-text">2</div>
+                </div>
+                <div class="triangle pastel-3">
+                    <div class="div-text">3</div>
+                </div>
+                <div class="triangle pastel-4">
+                    <div class="div-text">4</div>
+                </div>
+                <div class="triangle pastel-5">
+                    <div class="div-text">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>4. align-items </h1>
+            <div class="container-flex" style="align-items:end;">
+                <div class="triangle pastel-1">
+                    <div class="div-text">1</div>
+                </div>
+                <div class="triangle pastel-2">
+                    <div class="div-text">2</div>
+                </div>
+                <div class="triangle pastel-3">
+                    <div class="div-text">3</div>
+                </div>
+                <div class="triangle pastel-4">
+                    <div class="div-text">4</div>
+                </div>
+                <div class="triangle pastel-5">
+                    <div class="div-text">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>5. Flex Wrap</h1>
+            <div class="container-flex" style="flex-wrap: wrap; height: auto;">
+                <div class="triangle pastel-1">
+                    <div class="div-text">1</div>
+                </div>
+                <div class="triangle pastel-2">
+                    <div class="div-text">2</div>
+                </div>
+                <div class="triangle pastel-3">
+                    <div class="div-text">3</div>
+                </div>
+                <div class="triangle pastel-4">
+                    <div class="div-text">4</div>
+                </div>
+                <div class="triangle pastel-5">
+                    <div class="div-text">5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
