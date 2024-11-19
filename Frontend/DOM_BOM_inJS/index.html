@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Demo</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .highlight {
+            background-color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="sec1">
+        <h1>1. Acessing DOM Elements</h1>
+        <p id="myPara">Click the below button to change me!</p>
+        <button id="myBtn">
+            Click me!
+        </button>
+    </section>
+    <section id="sec2">
+        <h2>2. Traversing the DOM</h2>
+        <ul id="citiesList">
+            <li>New York</li>
+            <li>Paris</li>
+            <li>Tokyo</li>
+            <li>London</li>
+        </ul>
+        <button id="highlightFirstCity">
+            Highlight First City
+        </button>
+    </section>
+    <section id="sec3">
+        <h2>3. Manipulating DOM element</h2>
+        <div id="coffeeOrder">
+            Order: <span id="coffeeType">Lattee</span>
+        </div>
+        <button id="changeOrder">Change Order to Espresso</button>
+    </section>
+
+    <section id="sec4">
+        <h2>4. Creating and Inserting Element</h2>
+        <div id="shoppingList">
+            <li>Bread</li>
+            <li>Milk</li>
+        </div>
+        <button id="addNewItem">
+            Add new Item
+        </button>
+
+    </section>
+
+    <section id="sec5">
+        <h2>5. Removing DOM Element</h2>
+        <div id="shoppingList">
+           <ul id="taskList">
+            <li>Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+           </ul>
+        </div>
+        <button id="removeLastTask">
+            Remove Last Task
+        </button>
+
+    </section>
+
+    <section id="sec6">
+        <h2>6. Event Handling in DOM</h2>
+
+        <button id="clickMeBtn">Click Me!</button>
+    </section>
+
+    <section id="sec7">
+        <h2>7. Event Deligationn</h2>
+        <ul id="teaList">
+            <li class="teaItem">Green Tea</li>
+            <li class="teaItem">Masala Tea</li>
+            <li class="teaItem">Black Tea</li>
+        </ul>
+        <p>Click Any tea to Select it</p>
+    </section>
+
+    <section id="sec8">
+        <h2>8. Form Handling</h2>
+        <form id="feedBackForm">
+            <label for="feedBackInput">Your Feedback: </label>
+            <input type="text" id="feedBackInput" placeholder="Enter Feedback">
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p id="feedBackDisplay"></p>
+    </section>
+
+    <section id="sec9">
+        <h2>9. DOM Content Loaded</h2>
+        <p id="domStatus">Waiting for the DOM to load...</p>
+    </section>
+
+
+    <section id="sec10">
+        <h2>10. CSS Classes Maniputlations</h2>
+        <p id="descriptionText">This Text will change it's color!</p>
+
+        <button id="toggleHighlight">Toggle Highlight</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
