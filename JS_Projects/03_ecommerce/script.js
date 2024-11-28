@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded',
         }
         ];
 
-        cart = []
+        cart = JSON.parse(localStorage.getItem('cartItems')) || [];
 
         //Add the product Dynamically
         products.forEach((product) => {
@@ -65,10 +65,16 @@ document.addEventListener('DOMContentLoaded',
 
         function addToCart(selectedProd) {
             cart.push(selectedProd)
-            renderCard()
+            saveItemInLocalStorage();
+            renderCart();
         }
 
-        function renderCard() {
+        function  saveItemInLocalStorage(){
+            localStorage.setItem('cartItems',JSON.stringify(cart))
+        }
+
+
+        function renderCart() {
             cartItems.innerText = ""
             let totalPrice = 0;
             if (cart.length > 0) {
@@ -77,25 +83,43 @@ document.addEventListener('DOMContentLoaded',
                 cart.forEach(item => {
                     totalPrice += item.price;
                     const cartItem = document.createElement("div")
+                    cartItem.classList.add("product");
                     cartItem.innerHTML =
                         `<span> <strong>${item.name}</strong> - <em>$${item.price}</em></span>
-                    
+                         <button data-id="${item.id}">Remove</button>
                         `
                     cartItems.appendChild(cartItem)
                     totalPriceDisplay.textContent = `${totalPrice.toFixed(2)}`
                 });
             } else {
-                  emptyCart.classList.remove('hidden')
-                  totalPriceDisplay.textContent = `$0.00`
+                emptyCart.classList.remove('hidden')
+                totalPriceDisplay.textContent = `$0.00`
             }
-            checkoutBtn.addEventListener('click',
-                ()=>{
-                    cart.length= 0;
-                    alert('Checked Out Successfully')
-                    renderCard();
-                }
-            )
+
         }
+
+        cartItems.addEventListener('click', (e)=>{
+            if (e.target.tagName === 'BUTTON'){
+                const item = parseInt(e.target.getAttribute("data-id"));
+                let selectedItem = cart.find((cartItem)=> cartItem.id = item)
+                removeFromCart(selectedItem);
+            }
+        })
+
+        function removeFromCart(selectedItem){
+           cart = cart.filter((cartitem) => cartitem !== selectedItem);
+           renderCart()
+        }
+
+        checkoutBtn.addEventListener('click',
+            () => {
+                cart.length = 0;
+                saveItemInLocalStorage();
+                renderCart();
+                alert('Checked Out Successfully')
+
+            }
+        )
 
     }
 )
